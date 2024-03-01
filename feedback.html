@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+#reviews-container {
+  margin-top: 20px;
+}
+
+.review {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  margin: 0;
+}
+
+#review-form {
+  margin-top: 20px;
+}
+
+#review-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#review-form input[type="text"],
+#review-form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#review-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#review-form button:hover {
+  background-color: #0056b3;
+}
+  </style>
+</head>
+<body>
+  <h1>Student Reviews</h1>
+  <div id="reviews-container"></div>
+
+  <form id="review-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="review">Review:</label>
+    <textarea id="review" required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const reviewForm = document.getElementById('review-form');
+  const reviewsContainer = document.getElementById('reviews-container');
+
+  reviewForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const review = document.getElementById('review').value;
+
+    const reviewElement = document.createElement('div');
+    reviewElement.classList.add('review');
+    reviewElement.innerHTML = `
+      <h3>${name}</h3>
+      <p>${review}</p>
+    `;
+
+    reviewsContainer.appendChild(reviewElement);
+
+    // Clear form fields
+    document.getElementById('name').value = '';
+    document.getElementById('review').value = '';
+  });
+});
+  </script>
+</body>
+</html>
