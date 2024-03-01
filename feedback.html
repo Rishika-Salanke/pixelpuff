@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css">
   <title>Feedback</title>
   <style>
     body {
@@ -50,9 +53,60 @@
 #review-form button:hover {
   background-color: #0056b3;
 }
+header {
+            background-color: #355070;  
+        }
+    
+        
+        .icon {
+            display: flex; /* Added to align icons horizontally */
+            gap: 10px; /* Added gap between icons */
+            margin-right: 40px;
+            color: #D6E3F8;
+            padding: 5px 5px 5px 5px;
+            height: 2rem;
+        width: 5.5rem;
+        line-height: 5.5rem;
+        }
+    
+        /* Adjusted style for individual icons */
+        .icon i {
+            color: #D6E3F8; /* Changed icon color to white */
+            font-size: 29px; /* Adjusted icon size */
+            cursor: pointer;      
+        background-color:#9D5C63;
+     
+        }
+        .icon i:hover {
+        color: #9D5C63; /* Changed icon color on hover */
+        background-color: #D6E3F8;
+        transform: rotate(45deg);
+    }
   </style>
 </head>
-<body>
+
+    <header>
+        <a href="#" class="logo"><img src="logo.png" class="lg" height="75px" width="75px"></a>
+        <nav class="navbar">
+            <a href="#home" class="active"> home</a> 
+            <a href="# activitites">Activitites</a>
+            <a href="#achievements">Achievements</a> <!-- Corrected case of "team" -->
+            <a href="#staff">Staff</a>
+        </nav>
+        <div class="icon">
+             <i class="fas fa-bars"></i>
+             <i class="fas fa-search"></i>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <body>
+
   <h1>Student Reviews</h1>
   <div id="reviews-container"></div>
 
