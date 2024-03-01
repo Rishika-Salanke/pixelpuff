@@ -1,0 +1,28 @@
+header{
+    position: fixed;
+ top: 0;
+     Left: 0;
+     right: 0;
+    background: var(--black);
+     padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: var(--box-shadow); 
+    z-index: 10000;
+    height: 120px;
+}
+
+header .navbar a
+{
+    font-size: 1.7rem;
+    padding: .5rem 1rem;
+    color: white;
+   
+}
+header .navbar a.active,
+header .navbar a:hover
+{
+    color:#fff;
+    border: .1rem solid rgba(205,170,124,0.2);
+}
